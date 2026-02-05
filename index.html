@@ -7,7 +7,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css?v=7">
+    <link rel="stylesheet" href="style.css?v=8">
 </head>
 <body>
     <!-- Particle Canvas -->
@@ -15,40 +15,66 @@
 
     <!-- Page 1: Takeoff -->
     <section id="page1" class="page page-1 active">
-        <div class="page-bg page-1-bg"></div>
-        <div class="energy-lines"></div>
+        <div class="gradient-bg"></div>
+        <div class="animated-shapes">
+            <div class="shape shape-1"></div>
+            <div class="shape shape-2"></div>
+            <div class="shape shape-3"></div>
+            <div class="shape shape-4"></div>
+        </div>
         
         <div class="page-inner">
-            <div class="hero-visual">
+            <div class="hero-visual" id="heroVisual">
                 <div class="wing wing-left">🪽</div>
                 <div class="photo-wrapper">
-                    <img src="ananya.jpg" alt="Ananya Bajaj" class="hero-photo">
+                    <img src="ananya.jpg" alt="Ananya" class="hero-photo" id="heroPhoto">
                     <div class="photo-ring"></div>
                     <div class="photo-ring ring-2"></div>
+                    <div class="photo-spark"></div>
                 </div>
                 <div class="wing wing-right">🪽</div>
             </div>
             
             <div class="hero-content">
+                <div class="type-writer">
+                    <span class="intro-label" id="introLabel"></span>
+                </div>
+                
                 <h1 class="headline">
-                    <span class="line-1">Ananya doesn't just give presentations.</span>
-                    <span class="line-2">She launches supply chains.</span>
+                    <span class="word-pop">She</span>
+                    <span class="word-pop">doesn't</span>
+                    <span class="word-pop">present.</span>
+                    <br>
+                    <span class="word-pop big">She</span>
+                    <span class="word-pop big highlight">LAUNCHES.</span>
                 </h1>
-                <p class="subhead">Data Scientist at <span class="rb-text">Red Bull</span> — optimizing routes, inventory, and logistics at scale.</p>
-                <p class="roast">"Some people bring slides. She brings algorithms."</p>
+                
+                <div class="tagline-box" id="taglineBox">
+                    <span class="tag">🐂 Red Bull</span>
+                    <span class="tag">📊 Data Scientist</span>
+                    <span class="tag">🚚 Supply Chain Queen</span>
+                </div>
+                
+                <p class="roast-text" id="roastText">
+                    <span class="roast-icon">💬</span>
+                    <span class="roast-content">"Other people bring slides. Ananya brings <span class="strike">chaos</span> <span class="roast-word">algorithms</span>."</span>
+                </p>
             </div>
             
-            <button class="cta-btn pulse-btn" data-next="1">
-                <span class="btn-text">Tap to take off</span>
-                <span class="btn-icon">🪽</span>
+            <button class="cta-btn mega-btn" data-next="1" id="ctaBtn1">
+                <span class="btn-text">LET'S GO</span>
+                <span class="btn-icon">🚀</span>
+                <div class="btn-ripple"></div>
             </button>
         </div>
         
-        <div class="floating-elements">
-            <span class="float-item" style="--delay: 0s; --x: 10%; --y: 15%;">🥤</span>
-            <span class="float-item" style="--delay: 0.5s; --x: 85%; --y: 20%;">⚡</span>
-            <span class="float-item" style="--delay: 1s; --x: 15%; --y: 70%;">🐂</span>
-            <span class="float-item" style="--delay: 1.5s; --x: 80%; --y: 75%;">🥤</span>
+        <div class="floating-emojis">
+            <span class="emoji-float" style="--i:0">⚡</span>
+            <span class="emoji-float" style="--i:1">🥤</span>
+            <span class="emoji-float" style="--i:2">🐂</span>
+            <span class="emoji-float" style="--i:3">✨</span>
+            <span class="emoji-float" style="--i:4">🔥</span>
+            <span class="emoji-float" style="--i:5">💪</span>
         </div>
     </section>
 
@@ -57,18 +83,23 @@
         <div class="page-bg page-2-bg"></div>
         
         <div class="page-inner">
-            <div class="work-intro">
-                <p class="work-label">THE WORK</p>
-                <h2 class="work-headline">This is not an animation.</h2>
-                <p class="work-subline">This is her actual work.</p>
+            <div class="work-header">
+                <span class="blink-dot"></span>
+                <span class="work-label">LIVE FROM HER BRAIN</span>
             </div>
             
-            <div class="visualization-container">
+            <h2 class="work-headline glitch" data-text="Not a simulation.">Not a simulation.</h2>
+            <p class="work-subline">This is <span class="typed-text" id="typedWork"></span></p>
+            
+            <div class="visualization-container" id="vizContainer">
+                <div class="viz-overlay">
+                    <span>TAP TO EXPLORE</span>
+                </div>
                 <div class="viz-glow"></div>
                 <div class="delivery-animation">
                     <div class="warehouse">
                         <span class="warehouse-icon">🏭</span>
-                        <span class="warehouse-label">Hub</span>
+                        <span class="warehouse-label">HQ</span>
                         <div class="warehouse-pulse"></div>
                     </div>
                     
@@ -95,28 +126,22 @@
                         <line x1="50" y1="50" x2="5" y2="50" class="route-line"/>
                     </svg>
                 </div>
-            </div>
-            
-            <div class="work-details">
-                <div class="detail-item">
-                    <span class="detail-icon">📦</span>
-                    <span class="detail-text">One warehouse</span>
-                </div>
-                <div class="detail-item">
-                    <span class="detail-icon">🛣️</span>
-                    <span class="detail-text">Multiple optimized routes</span>
-                </div>
-                <div class="detail-item">
-                    <span class="detail-icon">⚖️</span>
-                    <span class="detail-text">Inventory balanced with precision</span>
+                
+                <div class="viz-stats">
+                    <div class="stat-pill"><span class="stat-num" data-target="6">0</span> routes</div>
+                    <div class="stat-pill"><span class="stat-num" data-target="30">0</span>% faster</div>
+                    <div class="stat-pill">$<span class="stat-num" data-target="2">0</span>M+ saved</div>
                 </div>
             </div>
             
-            <p class="work-roast">Every truck here is doing less work<br>because she did more thinking.</p>
+            <p class="work-punchline">
+                Less driving. More delivering.<br>
+                <span class="small">That's the Ananya effect.</span>
+            </p>
             
             <button class="cta-btn" data-next="2">
-                <span class="btn-text">Why this matters</span>
-                <span class="btn-icon">➜</span>
+                <span class="btn-text">THE FINALE</span>
+                <span class="btn-icon">→</span>
             </button>
         </div>
     </section>
@@ -125,6 +150,7 @@
     <section id="page3" class="page page-3">
         <div class="page-bg page-3-bg"></div>
         <div class="confetti-container" id="confetti"></div>
+        <div class="spotlight"></div>
         
         <div class="page-inner">
             <div class="final-visual">
@@ -132,38 +158,45 @@
                     <span class="mega-wing left">🪽</span>
                     <span class="mega-wing right">🪽</span>
                 </div>
-                <img src="redbull-can.jpg" alt="Red Bull" class="hero-can">
+                <img src="redbull-can.jpg" alt="Red Bull" class="hero-can" id="heroCan">
             </div>
             
             <div class="final-content">
-                <h1 class="proud-headline">
-                    <span class="word">We're</span>
-                    <span class="word">proud</span>
-                    <span class="word">of</span>
-                    <span class="word">you.</span>
+                <h1 class="proud-headline" id="proudHeadline">
+                    WE BELIEVE IN YOU.
                 </h1>
                 
-                <div class="affirmations">
-                    <p class="affirm" style="--i: 0">✓ You've built the models.</p>
-                    <p class="affirm" style="--i: 1">✓ You know the story.</p>
-                    <p class="affirm" style="--i: 2">✓ Tomorrow is just the victory lap.</p>
+                <div class="checklist">
+                    <div class="check-item" style="--d:0.2s">
+                        <span class="check-box">✓</span>
+                        <span class="check-text">Models? <strong>Built.</strong></span>
+                    </div>
+                    <div class="check-item" style="--d:0.4s">
+                        <span class="check-box">✓</span>
+                        <span class="check-text">Story? <strong>Known.</strong></span>
+                    </div>
+                    <div class="check-item" style="--d:0.6s">
+                        <span class="check-box">✓</span>
+                        <span class="check-text">Audience? <strong>2,000 people.</strong></span>
+                    </div>
+                    <div class="check-item" style="--d:0.8s">
+                        <span class="check-box">✓</span>
+                        <span class="check-text">Ananya? <strong>UNSTOPPABLE.</strong></span>
+                    </div>
                 </div>
                 
-                <p class="final-line">Now go remind them why<br><span class="highlight">Red Bull hires people like you.</span></p>
+                <p class="final-message">
+                    Tomorrow isn't a presentation.<br>
+                    <span class="big-text">It's a VICTORY LAP. 🏆</span>
+                </p>
             </div>
             
-            <button class="cta-btn final-cta glow-btn">
-                <span class="btn-text">Go crush it</span>
-                <span class="btn-icon">🚀</span>
+            <button class="cta-btn final-cta glow-btn" id="finalBtn">
+                <span class="btn-text">GO CRUSH IT</span>
+                <span class="btn-icon">🔥</span>
             </button>
-        </div>
-        
-        <div class="floating-elements">
-            <span class="float-item" style="--delay: 0s; --x: 8%; --y: 20%;">⭐</span>
-            <span class="float-item" style="--delay: 0.3s; --x: 92%; --y: 15%;">✨</span>
-            <span class="float-item" style="--delay: 0.6s; --x: 5%; --y: 80%;">🌟</span>
-            <span class="float-item" style="--delay: 0.9s; --x: 90%; --y: 85%;">💫</span>
-            <span class="float-item" style="--delay: 1.2s; --x: 50%; --y: 5%;">⚡</span>
+            
+            <p class="signature">— Your hype squad 💪</p>
         </div>
     </section>
 
@@ -175,11 +208,8 @@
     </div>
 
     <!-- Back Button -->
-    <button class="back-btn hidden" id="backBtn">
-        <span class="back-arrow">←</span>
-        <span class="back-text">Back</span>
-    </button>
+    <button class="back-btn hidden" id="backBtn">← Back</button>
 
-    <script src="script.js?v=7"></script>
+    <script src="script.js?v=8"></script>
 </body>
 </html>
