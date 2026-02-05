@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Supply Chain Optimization | Red Bull Data Science</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Animated Background -->
+    <div class="bg-animation">
+        <div class="route-line route-1"></div>
+        <div class="route-line route-2"></div>
+        <div class="route-line route-3"></div>
+        <div class="floating-truck truck-1">🚚</div>
+        <div class="floating-truck truck-2">🚛</div>
+        <div class="floating-truck truck-3">📦</div>
+    </div>
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero">
+        <div class="hero-content">
+            <div class="red-bull-badge">
+                <span class="badge-icon">🐂</span>
+                <span class="badge-text">Red Bull Data Science</span>
+            </div>
+            <h1 class="hero-title">
+                <span class="line line-1">Optimizing</span>
+                <span class="line line-2">Every Mile</span>
+                <span class="line line-3">Every Delivery</span>
+            </h1>
+            <p class="hero-subtitle">Supply Chain Route Optimization at Scale</p>
+            <div class="scroll-indicator">
+                <span class="mouse"></span>
+                <span class="scroll-text">Scroll to explore</span>
+            </div>
+        </div>
+        <div class="hero-stats">
+            <div class="stat">
+                <span class="stat-number" data-target="2000">0</span>
+                <span class="stat-label">Attendees Today</span>
+            </div>
+            <div class="stat">
+                <span class="stat-number" data-target="1000000">0</span>
+                <span class="stat-suffix">+</span>
+                <span class="stat-label">Routes Optimized</span>
+            </div>
+            <div class="stat">
+                <span class="stat-number" data-target="30">0</span>
+                <span class="stat-suffix">%</span>
+                <span class="stat-label">Efficiency Gain</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Problem Section -->
+    <section id="problem" class="section problem-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">The Challenge</span>
+                <h2>Moving Energy <span class="highlight">Everywhere</span></h2>
+            </div>
+            <div class="problem-grid">
+                <div class="problem-card" data-aos="fade-up">
+                    <div class="card-icon">🌍</div>
+                    <h3>Global Scale</h3>
+                    <p>Thousands of delivery points across multiple regions, each with unique constraints and demands.</p>
+                </div>
+                <div class="problem-card" data-aos="fade-up" data-delay="100">
+                    <div class="card-icon">⏱️</div>
+                    <h3>Time Sensitivity</h3>
+                    <p>Fresh inventory, tight windows, and customers who expect precision delivery.</p>
+                </div>
+                <div class="problem-card" data-aos="fade-up" data-delay="200">
+                    <div class="card-icon">📊</div>
+                    <h3>Complex Variables</h3>
+                    <p>Traffic, weather, truck capacity, driver hours, store schedules — endless factors to balance.</p>
+                </div>
+                <div class="problem-card" data-aos="fade-up" data-delay="300">
+                    <div class="card-icon">💰</div>
+                    <h3>Cost Pressure</h3>
+                    <p>Every extra mile is money. Every delayed delivery is a missed opportunity.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Solution Section -->
+    <section id="solution" class="section solution-section">
+        <div class="container">
+            <div class="section-header light">
+                <span class="section-tag">Our Approach</span>
+                <h2>Data-Driven <span class="highlight">Optimization</span></h2>
+            </div>
+            <div class="solution-content">
+                <div class="solution-visual">
+                    <div class="network-animation">
+                        <div class="node node-center">
+                            <span>📍</span>
+                            <div class="node-label">Distribution Hub</div>
+                        </div>
+                        <div class="node node-1"><span>🏪</span></div>
+                        <div class="node node-2"><span>🏬</span></div>
+                        <div class="node node-3"><span>🏪</span></div>
+                        <div class="node node-4"><span>⛽</span></div>
+                        <div class="node node-5"><span>🏬</span></div>
+                        <div class="node node-6"><span>🏪</span></div>
+                        <svg class="connections" viewBox="0 0 400 400">
+                            <line class="connection" x1="200" y1="200" x2="100" y2="80"/>
+                            <line class="connection" x1="200" y1="200" x2="300" y2="100"/>
+                            <line class="connection" x1="200" y1="200" x2="350" y2="220"/>
+                            <line class="connection" x1="200" y1="200" x2="280" y2="340"/>
+                            <line class="connection" x1="200" y1="200" x2="120" y2="320"/>
+                            <line class="connection" x1="200" y1="200" x2="50" y2="200"/>
+                        </svg>
+                    </div>
+                </div>
+                <div class="solution-steps">
+                    <div class="step">
+                        <div class="step-number">01</div>
+                        <div class="step-content">
+                            <h3>Data Collection</h3>
+                            <p>Real-time GPS, historical patterns, demand forecasts, and external signals converge into our data lake.</p>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">02</div>
+                        <div class="step-content">
+                            <h3>Optimization Engine</h3>
+                            <p>Advanced algorithms crunch millions of possible routes to find the optimal path — balancing time, cost, and constraints.</p>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">03</div>
+                        <div class="step-content">
+                            <h3>Dynamic Routing</h3>
+                            <p>Routes adapt in real-time. Traffic jam? We reroute. New order? We fit it in. Always optimizing.</p>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">04</div>
+                        <div class="step-content">
+                            <h3>Continuous Learning</h3>
+                            <p>Every delivery teaches us. ML models improve daily, getting smarter with each mile driven.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Impact Section -->
+    <section id="impact" class="section impact-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">The Results</span>
+                <h2>Impact at <span class="highlight">Scale</span></h2>
+            </div>
+            <div class="impact-metrics">
+                <div class="metric-card">
+                    <div class="metric-visual">
+                        <svg class="progress-ring" viewBox="0 0 120 120">
+                            <circle class="ring-bg" cx="60" cy="60" r="54"/>
+                            <circle class="ring-progress" cx="60" cy="60" r="54" data-percent="30"/>
+                        </svg>
+                        <span class="metric-value">30%</span>
+                    </div>
+                    <h3>Fuel Savings</h3>
+                    <p>Fewer miles, smarter routes, less fuel burned</p>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-visual">
+                        <svg class="progress-ring" viewBox="0 0 120 120">
+                            <circle class="ring-bg" cx="60" cy="60" r="54"/>
+                            <circle class="ring-progress" cx="60" cy="60" r="54" data-percent="25"/>
+                        </svg>
+                        <span class="metric-value">25%</span>
+                    </div>
+                    <h3>Faster Delivery</h3>
+                    <p>Products reach shelves when they're needed</p>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-visual">
+                        <svg class="progress-ring" viewBox="0 0 120 120">
+                            <circle class="ring-bg" cx="60" cy="60" r="54"/>
+                            <circle class="ring-progress" cx="60" cy="60" r="54" data-percent="40"/>
+                        </svg>
+                        <span class="metric-value">40%</span>
+                    </div>
+                    <h3>CO₂ Reduction</h3>
+                    <p>Optimization that's good for business and planet</p>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-visual">
+                        <svg class="progress-ring" viewBox="0 0 120 120">
+                            <circle class="ring-bg" cx="60" cy="60" r="54"/>
+                            <circle class="ring-progress" cx="60" cy="60" r="54" data-percent="99"/>
+                        </svg>
+                        <span class="metric-value">99%</span>
+                    </div>
+                    <h3>On-Time Rate</h3>
+                    <p>Reliability that builds trust with partners</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section id="team" class="section team-section">
+        <div class="container">
+            <div class="section-header light">
+                <span class="section-tag">The Team</span>
+                <h2>Built by <span class="highlight">Brilliant Minds</span></h2>
+            </div>
+            <div class="team-content">
+                <p class="team-description">
+                    This project is the result of passionate data scientists, engineers, and operations experts 
+                    working together to transform how Red Bull moves products around the world.
+                </p>
+                <div class="team-values">
+                    <div class="value">
+                        <span class="value-icon">🧠</span>
+                        <span class="value-text">Data-First Thinking</span>
+                    </div>
+                    <div class="value">
+                        <span class="value-icon">🚀</span>
+                        <span class="value-text">Relentless Optimization</span>
+                    </div>
+                    <div class="value">
+                        <span class="value-icon">🤝</span>
+                        <span class="value-text">Cross-Functional Collaboration</span>
+                    </div>
+                    <div class="value">
+                        <span class="value-icon">🌱</span>
+                        <span class="value-text">Sustainable Impact</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section id="cta" class="section cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Red Bull Gives You <span class="wings">Wings</span></h2>
+                <p>And data science gives our supply chain superpowers.</p>
+                <div class="cta-tagline">
+                    <span class="energy-icon">⚡</span>
+                    <span>Thank you for being here today!</span>
+                    <span class="energy-icon">⚡</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>Supply Chain Optimization Team • Red Bull Data Science • 2026</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
