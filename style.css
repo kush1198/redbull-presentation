@@ -274,6 +274,7 @@ body {
     align-items: center;
     justify-content: center;
     position: relative;
+    overflow: auto;
 }
 
 .page2-content {
@@ -281,6 +282,7 @@ body {
     padding: 2rem;
     max-width: 600px;
     z-index: 2;
+    position: relative;
 }
 
 .photo-container {
