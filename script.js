@@ -26,6 +26,14 @@ document.addEventListener('DOMContentLoaded', () => {
     document.getElementById('unlock-btn-2')?.addEventListener('click', () => goToPage(2));
     document.getElementById('unlock-btn-3')?.addEventListener('click', () => goToPage(3));
 
+    // Back button handlers
+    document.querySelectorAll('.back-btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+            const target = parseInt(btn.dataset.target);
+            goToPage(target);
+        });
+    });
+
     // Delivery animation enhancements
     const startDeliveryAnimation = () => {
         // Add extra particles or effects when animation page loads
