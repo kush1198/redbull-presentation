@@ -2,101 +2,57 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Go Get 'Em, Ananya! 🐂</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Go Ananya! 🪽</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css?v=4">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css?v=5">
 </head>
 <body>
-    <!-- Page 1: Intro -->
+    <!-- Page 1: Takeoff / Hype Intro -->
     <section id="page1" class="page page-1 active">
-        <div class="page1-content">
-            <div class="sparkles-container">
-                <div class="sparkle">✨</div>
-                <div class="sparkle">⭐</div>
-                <div class="sparkle">✨</div>
-                <div class="sparkle">💫</div>
-                <div class="sparkle">🌟</div>
-                <div class="sparkle">✨</div>
-            </div>
-            
-            <!-- Hero Image with Wings -->
-            <div class="hero-image-container">
+        <div class="page-inner">
+            <div class="hero-visual">
                 <div class="wing wing-left">🪽</div>
-                <div class="hero-photo-wrapper">
+                <div class="photo-wrapper">
                     <img src="ananya.jpg" alt="Ananya Bajaj" class="hero-photo">
+                    <div class="photo-glow"></div>
                 </div>
                 <div class="wing wing-right">🪽</div>
             </div>
             
-            <p class="intro-text">Hey Ananya...</p>
-            <h1 class="big-message">
-                <span class="line">Tomorrow is</span>
-                <span class="line highlight">YOUR day</span>
-            </h1>
-            <p class="sub-message">2,000 people. One stage. And YOU.</p>
+            <div class="hero-content">
+                <h1 class="headline">
+                    Ananya doesn't just give presentations.<br>
+                    <span class="highlight">She launches supply chains.</span>
+                </h1>
+                <p class="subhead">Data Scientist at Red Bull — optimizing routes, inventory, and logistics at scale.</p>
+                <p class="roast">Some people bring slides. She brings algorithms.</p>
+            </div>
             
-            <button id="unlock-btn-1" class="unlock-btn">
-                <span>Ready to feel the energy?</span>
-                <span class="arrow">→</span>
+            <button class="cta-btn" data-next="1">
+                Tap to take off <span class="wing-icon">🪽</span>
             </button>
         </div>
     </section>
 
-    <!-- Page 2: The Hype -->
+    <!-- Page 2: The Work -->
     <section id="page2" class="page page-2">
-        <div class="page2-wrapper">
-            <button class="back-btn" data-target="0">← Back</button>
-            <div class="page2-content">
-                <div class="photo-container">
-                    <div class="photo-frame">
-                        <img src="ananya.jpg" alt="Ananya Bajaj" class="profile-photo">
-                    </div>
-                    <div class="name-badge">
-                        <span class="badge-icon">🐂</span>
-                        <div class="badge-text">
-                            <span class="name">Ananya Bajaj</span>
-                            <span class="title">Data Scientist @ Red Bull</span>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="hype-message">
-                    <h2>You've got this.</h2>
-                    <p class="proud-text">
-                        You turned <strong>chaos into clarity</strong>.<br>
-                        Routes that made no sense? <strong>Optimized.</strong><br>
-                        Trucks running in circles? <strong>Fixed.</strong><br>
-                        Your team's work? <strong>Legendary.</strong>
-                    </p>
-                </div>
-                
-                <button id="unlock-btn-2" class="unlock-btn light">
-                    <span>See what you built</span>
-                    <span class="arrow">→</span>
-                </button>
+        <div class="page-inner">
+            <div class="work-intro">
+                <p class="work-headline">This is not an animation.</p>
+                <p class="work-subline">This is her actual work.</p>
             </div>
-        </div>
-    </section>
-
-    <!-- Page 3: The Animation -->
-    <section id="page3" class="page page-3">
-        <div class="page3-wrapper">
-            <button class="back-btn" data-target="1">← Back</button>
-            <div class="page3-content">
-                <h2 class="section-title">This is what you optimized</h2>
-                <p class="section-sub">From one warehouse → Everywhere</p>
-                
-                <!-- Truck Animation Canvas -->
+            
+            <!-- VISUALIZATION CONTAINER - DO NOT MODIFY INNER CONTENT -->
+            <div class="visualization-container">
                 <div class="delivery-animation">
                     <div class="warehouse">
                         <span class="warehouse-icon">🏭</span>
                         <span class="warehouse-label">Distribution Hub</span>
                     </div>
                     
-                    <!-- Trucks -->
                     <div class="truck truck-1">🚚</div>
                     <div class="truck truck-2">🚛</div>
                     <div class="truck truck-3">🚚</div>
@@ -104,7 +60,6 @@
                     <div class="truck truck-5">🚚</div>
                     <div class="truck truck-6">🚛</div>
                     
-                    <!-- Stores -->
                     <div class="store store-1"><span>🏪</span></div>
                     <div class="store store-2"><span>🏬</span></div>
                     <div class="store store-3"><span>⛽</span></div>
@@ -112,69 +67,59 @@
                     <div class="store store-5"><span>🏬</span></div>
                     <div class="store store-6"><span>🏪</span></div>
                 </div>
-                
-                <div class="impact-stats">
-                    <div class="impact-stat">
-                        <span class="stat-icon">⚡</span>
-                        <span class="stat-value">30%</span>
-                        <span class="stat-label">Faster</span>
-                    </div>
-                    <div class="impact-stat">
-                        <span class="stat-icon">💰</span>
-                        <span class="stat-value">$M+</span>
-                        <span class="stat-label">Saved</span>
-                    </div>
-                    <div class="impact-stat">
-                        <span class="stat-icon">🌍</span>
-                        <span class="stat-value">40%</span>
-                        <span class="stat-label">Less CO₂</span>
-                    </div>
-                </div>
-                
-                <button id="unlock-btn-3" class="unlock-btn">
-                    <span>One more thing...</span>
-                    <span class="arrow">→</span>
-                </button>
             </div>
+            <!-- END VISUALIZATION -->
+            
+            <div class="work-stats">
+                <p>One warehouse.</p>
+                <p>Multiple optimized routes.</p>
+                <p>Inventory balanced with precision.</p>
+            </div>
+            
+            <p class="work-roast">Every truck here is doing less work because she did more thinking.</p>
+            
+            <button class="cta-btn" data-next="2">
+                Why this matters <span class="arrow">➜</span>
+            </button>
         </div>
     </section>
 
-    <!-- Page 4: Final Message -->
-    <section id="page4" class="page page-4">
-        <div class="page4-wrapper">
-            <button class="back-btn" data-target="2">← Back</button>
-            <div class="page4-content">
-                <div class="final-sparkles">
-                    <span class="fs">🌟</span>
-                    <span class="fs">✨</span>
-                    <span class="fs">⭐</span>
-                    <span class="fs">💫</span>
-                    <span class="fs">🌟</span>
-                    <span class="fs">✨</span>
-                </div>
-                
-                <div class="wings-container">
-                    <span class="wing-final wing-final-left">🪽</span>
-                    <div class="final-message">
-                        <h1>Go give 'em wings!</h1>
-                    </div>
-                    <span class="wing-final wing-final-right">🪽</span>
-                </div>
-                
-                <div class="closing">
-                    <p class="proud-statement">We're so proud of you, Ananya.</p>
-                    <p class="go-text">Now go show 2,000 people what a badass data scientist looks like.</p>
-                </div>
-                
-                <div class="redbull-can">🥤</div>
-                
-                <div class="signature">
-                    <p>— Your friends who believe in you 💪</p>
-                </div>
+    <!-- Page 3: Final Pump -->
+    <section id="page3" class="page page-3">
+        <div class="page-inner">
+            <div class="final-wings">
+                <span class="final-wing left">🪽</span>
+                <span class="final-wing right">🪽</span>
             </div>
+            
+            <div class="final-content">
+                <h1 class="proud-headline">We're proud of you.</h1>
+                
+                <div class="affirmations">
+                    <p>You've built the models.</p>
+                    <p>You know the story.</p>
+                    <p>Tomorrow is just the victory lap.</p>
+                </div>
+                
+                <p class="final-line">Now go remind them why Red Bull hires people like you.</p>
+            </div>
+            
+            <button class="cta-btn final-cta">
+                Go crush it <span class="rocket">🚀</span>
+            </button>
         </div>
     </section>
 
-    <script src="script.js?v=4"></script>
+    <!-- Progress Dots -->
+    <div class="progress-dots">
+        <span class="dot active" data-page="0"></span>
+        <span class="dot" data-page="1"></span>
+        <span class="dot" data-page="2"></span>
+    </div>
+
+    <!-- Back Button -->
+    <button class="back-btn hidden" id="backBtn">← Back</button>
+
+    <script src="script.js?v=5"></script>
 </body>
 </html>
