@@ -6,58 +6,70 @@
     <title>Go Ananya! 🪽</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css?v=6">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css?v=7">
 </head>
 <body>
-    <!-- Page 1: Takeoff / Hype Intro -->
+    <!-- Particle Canvas -->
+    <canvas id="particles"></canvas>
+
+    <!-- Page 1: Takeoff -->
     <section id="page1" class="page page-1 active">
         <div class="page-bg page-1-bg"></div>
+        <div class="energy-lines"></div>
+        
         <div class="page-inner">
             <div class="hero-visual">
                 <div class="wing wing-left">🪽</div>
                 <div class="photo-wrapper">
                     <img src="ananya.jpg" alt="Ananya Bajaj" class="hero-photo">
-                    <div class="photo-glow"></div>
+                    <div class="photo-ring"></div>
+                    <div class="photo-ring ring-2"></div>
                 </div>
                 <div class="wing wing-right">🪽</div>
             </div>
             
             <div class="hero-content">
                 <h1 class="headline">
-                    Ananya doesn't just give presentations.<br>
-                    <span class="highlight">She launches supply chains.</span>
+                    <span class="line-1">Ananya doesn't just give presentations.</span>
+                    <span class="line-2">She launches supply chains.</span>
                 </h1>
-                <p class="subhead">Data Scientist at Red Bull — optimizing routes, inventory, and logistics at scale.</p>
-                <p class="roast">Some people bring slides. She brings algorithms.</p>
+                <p class="subhead">Data Scientist at <span class="rb-text">Red Bull</span> — optimizing routes, inventory, and logistics at scale.</p>
+                <p class="roast">"Some people bring slides. She brings algorithms."</p>
             </div>
             
-            <button class="cta-btn" data-next="1">
-                Tap to take off <span class="wing-icon">🪽</span>
+            <button class="cta-btn pulse-btn" data-next="1">
+                <span class="btn-text">Tap to take off</span>
+                <span class="btn-icon">🪽</span>
             </button>
         </div>
         
-        <!-- Floating cans -->
-        <div class="floating-can can-1">🥤</div>
-        <div class="floating-can can-2">🥤</div>
-        <div class="floating-can can-3">🥤</div>
+        <div class="floating-elements">
+            <span class="float-item" style="--delay: 0s; --x: 10%; --y: 15%;">🥤</span>
+            <span class="float-item" style="--delay: 0.5s; --x: 85%; --y: 20%;">⚡</span>
+            <span class="float-item" style="--delay: 1s; --x: 15%; --y: 70%;">🐂</span>
+            <span class="float-item" style="--delay: 1.5s; --x: 80%; --y: 75%;">🥤</span>
+        </div>
     </section>
 
     <!-- Page 2: The Work -->
     <section id="page2" class="page page-2">
         <div class="page-bg page-2-bg"></div>
+        
         <div class="page-inner">
             <div class="work-intro">
-                <p class="work-headline">This is not an animation.</p>
+                <p class="work-label">THE WORK</p>
+                <h2 class="work-headline">This is not an animation.</h2>
                 <p class="work-subline">This is her actual work.</p>
             </div>
             
-            <!-- VISUALIZATION CONTAINER - DO NOT MODIFY INNER CONTENT -->
             <div class="visualization-container">
+                <div class="viz-glow"></div>
                 <div class="delivery-animation">
                     <div class="warehouse">
                         <span class="warehouse-icon">🏭</span>
-                        <span class="warehouse-label">Distribution Hub</span>
+                        <span class="warehouse-label">Hub</span>
+                        <div class="warehouse-pulse"></div>
                     </div>
                     
                     <div class="truck truck-1">🚚</div>
@@ -73,20 +85,38 @@
                     <div class="store store-4"><span>🏪</span></div>
                     <div class="store store-5"><span>🏬</span></div>
                     <div class="store store-6"><span>🏪</span></div>
+                    
+                    <svg class="route-lines" viewBox="0 0 100 100" preserveAspectRatio="none">
+                        <line x1="50" y1="50" x2="15" y2="10" class="route-line"/>
+                        <line x1="50" y1="50" x2="85" y2="10" class="route-line"/>
+                        <line x1="50" y1="50" x2="95" y2="50" class="route-line"/>
+                        <line x1="50" y1="50" x2="85" y2="90" class="route-line"/>
+                        <line x1="50" y1="50" x2="15" y2="90" class="route-line"/>
+                        <line x1="50" y1="50" x2="5" y2="50" class="route-line"/>
+                    </svg>
                 </div>
             </div>
-            <!-- END VISUALIZATION -->
             
-            <div class="work-stats">
-                <p>One warehouse.</p>
-                <p>Multiple optimized routes.</p>
-                <p>Inventory balanced with precision.</p>
+            <div class="work-details">
+                <div class="detail-item">
+                    <span class="detail-icon">📦</span>
+                    <span class="detail-text">One warehouse</span>
+                </div>
+                <div class="detail-item">
+                    <span class="detail-icon">🛣️</span>
+                    <span class="detail-text">Multiple optimized routes</span>
+                </div>
+                <div class="detail-item">
+                    <span class="detail-icon">⚖️</span>
+                    <span class="detail-text">Inventory balanced with precision</span>
+                </div>
             </div>
             
-            <p class="work-roast">Every truck here is doing less work because she did more thinking.</p>
+            <p class="work-roast">Every truck here is doing less work<br>because she did more thinking.</p>
             
             <button class="cta-btn" data-next="2">
-                Why this matters <span class="arrow">➜</span>
+                <span class="btn-text">Why this matters</span>
+                <span class="btn-icon">➜</span>
             </button>
         </div>
     </section>
@@ -94,36 +124,47 @@
     <!-- Page 3: Final Pump -->
     <section id="page3" class="page page-3">
         <div class="page-bg page-3-bg"></div>
+        <div class="confetti-container" id="confetti"></div>
+        
         <div class="page-inner">
-            <div class="final-wings">
-                <span class="final-wing left">🪽</span>
-                <span class="final-wing right">🪽</span>
+            <div class="final-visual">
+                <div class="mega-wings">
+                    <span class="mega-wing left">🪽</span>
+                    <span class="mega-wing right">🪽</span>
+                </div>
+                <img src="redbull-can.jpg" alt="Red Bull" class="hero-can">
             </div>
             
             <div class="final-content">
-                <h1 class="proud-headline">We're proud of you.</h1>
+                <h1 class="proud-headline">
+                    <span class="word">We're</span>
+                    <span class="word">proud</span>
+                    <span class="word">of</span>
+                    <span class="word">you.</span>
+                </h1>
                 
                 <div class="affirmations">
-                    <p>You've built the models.</p>
-                    <p>You know the story.</p>
-                    <p>Tomorrow is just the victory lap.</p>
+                    <p class="affirm" style="--i: 0">✓ You've built the models.</p>
+                    <p class="affirm" style="--i: 1">✓ You know the story.</p>
+                    <p class="affirm" style="--i: 2">✓ Tomorrow is just the victory lap.</p>
                 </div>
                 
-                <p class="final-line">Now go remind them why Red Bull hires people like you.</p>
+                <p class="final-line">Now go remind them why<br><span class="highlight">Red Bull hires people like you.</span></p>
             </div>
             
-            <div class="redbull-can-img">
-                <img src="redbull-can.jpg" alt="Red Bull" class="can-image">
-            </div>
-            
-            <button class="cta-btn final-cta">
-                Go crush it <span class="rocket">🚀</span>
+            <button class="cta-btn final-cta glow-btn">
+                <span class="btn-text">Go crush it</span>
+                <span class="btn-icon">🚀</span>
             </button>
         </div>
         
-        <!-- Floating cans -->
-        <div class="floating-can can-4">🥤</div>
-        <div class="floating-can can-5">🥤</div>
+        <div class="floating-elements">
+            <span class="float-item" style="--delay: 0s; --x: 8%; --y: 20%;">⭐</span>
+            <span class="float-item" style="--delay: 0.3s; --x: 92%; --y: 15%;">✨</span>
+            <span class="float-item" style="--delay: 0.6s; --x: 5%; --y: 80%;">🌟</span>
+            <span class="float-item" style="--delay: 0.9s; --x: 90%; --y: 85%;">💫</span>
+            <span class="float-item" style="--delay: 1.2s; --x: 50%; --y: 5%;">⚡</span>
+        </div>
     </section>
 
     <!-- Progress Dots -->
@@ -134,8 +175,11 @@
     </div>
 
     <!-- Back Button -->
-    <button class="back-btn hidden" id="backBtn">← Back</button>
+    <button class="back-btn hidden" id="backBtn">
+        <span class="back-arrow">←</span>
+        <span class="back-text">Back</span>
+    </button>
 
-    <script src="script.js?v=6"></script>
+    <script src="script.js?v=7"></script>
 </body>
 </html>
