@@ -13,46 +13,22 @@
     <!-- Page 1: Intro -->
     <section id="page1" class="page page-1 active">
         <div class="page1-content">
-            <div class="sparkle sparkle-1">✨</div>
-            <div class="sparkle sparkle-2">⭐</div>
-            <div class="sparkle sparkle-3">✨</div>
-            <div class="sparkle sparkle-4">💫</div>
-            <div class="sparkle sparkle-5">🌟</div>
-            <div class="sparkle sparkle-6">✨</div>
+            <div class="sparkles-container">
+                <div class="sparkle">✨</div>
+                <div class="sparkle">⭐</div>
+                <div class="sparkle">✨</div>
+                <div class="sparkle">💫</div>
+                <div class="sparkle">🌟</div>
+                <div class="sparkle">✨</div>
+            </div>
             
             <!-- Hero Image with Wings -->
             <div class="hero-image-container">
-                <div class="wing-svg wing-left-svg">
-                    <svg viewBox="0 0 200 300" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M180 150 Q150 100 100 80 Q50 60 20 100 Q0 130 30 160 Q60 190 100 180 Q140 170 180 150Z" fill="url(#wingGradientL)" opacity="0.9"/>
-                        <path d="M170 160 Q140 120 90 100 Q40 80 15 120 Q-5 150 25 175 Q55 200 95 190 Q135 180 170 160Z" fill="url(#wingGradientL)" opacity="0.7"/>
-                        <path d="M160 170 Q130 140 80 125 Q30 110 10 145 Q-10 175 20 195 Q50 215 90 205 Q130 195 160 170Z" fill="url(#wingGradientL)" opacity="0.5"/>
-                        <defs>
-                            <linearGradient id="wingGradientL" x1="0%" y1="0%" x2="100%" y2="100%">
-                                <stop offset="0%" style="stop-color:#ffc906"/>
-                                <stop offset="50%" style="stop-color:#ffdb4d"/>
-                                <stop offset="100%" style="stop-color:#fff"/>
-                            </linearGradient>
-                        </defs>
-                    </svg>
-                </div>
+                <div class="wing wing-left">🪽</div>
                 <div class="hero-photo-wrapper">
                     <img src="ananya.jpg" alt="Ananya Bajaj" class="hero-photo">
                 </div>
-                <div class="wing-svg wing-right-svg">
-                    <svg viewBox="0 0 200 300" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M20 150 Q50 100 100 80 Q150 60 180 100 Q200 130 170 160 Q140 190 100 180 Q60 170 20 150Z" fill="url(#wingGradientR)" opacity="0.9"/>
-                        <path d="M30 160 Q60 120 110 100 Q160 80 185 120 Q205 150 175 175 Q145 200 105 190 Q65 180 30 160Z" fill="url(#wingGradientR)" opacity="0.7"/>
-                        <path d="M40 170 Q70 140 120 125 Q170 110 190 145 Q210 175 180 195 Q150 215 110 205 Q70 195 40 170Z" fill="url(#wingGradientR)" opacity="0.5"/>
-                        <defs>
-                            <linearGradient id="wingGradientR" x1="100%" y1="0%" x2="0%" y2="100%">
-                                <stop offset="0%" style="stop-color:#ffc906"/>
-                                <stop offset="50%" style="stop-color:#ffdb4d"/>
-                                <stop offset="100%" style="stop-color:#fff"/>
-                            </linearGradient>
-                        </defs>
-                    </svg>
-                </div>
+                <div class="wing wing-right">🪽</div>
             </div>
             
             <p class="intro-text">Hey Ananya...</p>
@@ -71,136 +47,130 @@
 
     <!-- Page 2: The Hype -->
     <section id="page2" class="page page-2">
-        <button class="back-btn" data-target="0">← Back</button>
-        <div class="page2-content">
-            <div class="photo-container">
-                <div class="photo-frame">
-                    <img src="https://media.licdn.com/dms/image/v2/D5603AQGhLTlP4Spyeg/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1686200543436?e=1743638400&v=beta&t=kALjrWBU2HIONPu-vYPiYmgkIiTMIFqWCrQ3VRRXeYA" alt="Ananya Bajaj" class="profile-photo" onerror="this.src='https://ui-avatars.com/api/?name=Ananya+Bajaj&size=300&background=db0a40&color=fff&bold=true'">
-                </div>
-                <div class="name-badge">
-                    <span class="badge-icon">🐂</span>
-                    <div class="badge-text">
-                        <span class="name">Ananya Bajaj</span>
-                        <span class="title">Data Scientist @ Red Bull</span>
+        <div class="page2-wrapper">
+            <button class="back-btn" data-target="0">← Back</button>
+            <div class="page2-content">
+                <div class="photo-container">
+                    <div class="photo-frame">
+                        <img src="ananya.jpg" alt="Ananya Bajaj" class="profile-photo">
+                    </div>
+                    <div class="name-badge">
+                        <span class="badge-icon">🐂</span>
+                        <div class="badge-text">
+                            <span class="name">Ananya Bajaj</span>
+                            <span class="title">Data Scientist @ Red Bull</span>
+                        </div>
                     </div>
                 </div>
+                
+                <div class="hype-message">
+                    <h2>You've got this.</h2>
+                    <p class="proud-text">
+                        You turned <strong>chaos into clarity</strong>.<br>
+                        Routes that made no sense? <strong>Optimized.</strong><br>
+                        Trucks running in circles? <strong>Fixed.</strong><br>
+                        Your team's work? <strong>Legendary.</strong>
+                    </p>
+                </div>
+                
+                <button id="unlock-btn-2" class="unlock-btn light">
+                    <span>See what you built</span>
+                    <span class="arrow">→</span>
+                </button>
             </div>
-            
-            <div class="hype-message">
-                <h2>You've got this.</h2>
-                <p class="proud-text">
-                    You turned <strong>chaos into clarity</strong>.<br>
-                    Routes that made no sense? <strong>Optimized.</strong><br>
-                    Trucks running in circles? <strong>Fixed.</strong><br>
-                    Your team's work? <strong>Legendary.</strong>
-                </p>
-            </div>
-            
-            <button id="unlock-btn-2" class="unlock-btn light">
-                <span>See what you built</span>
-                <span class="arrow">→</span>
-            </button>
         </div>
     </section>
 
     <!-- Page 3: The Animation -->
     <section id="page3" class="page page-3">
-        <button class="back-btn" data-target="1">← Back</button>
-        <div class="page3-content">
-            <h2 class="section-title">This is what you optimized</h2>
-            <p class="section-sub">From one warehouse → Everywhere</p>
-            
-            <!-- Truck Animation Canvas -->
-            <div class="delivery-animation">
-                <div class="warehouse">
-                    <span class="warehouse-icon">🏭</span>
-                    <span class="warehouse-label">Distribution Hub</span>
+        <div class="page3-wrapper">
+            <button class="back-btn" data-target="1">← Back</button>
+            <div class="page3-content">
+                <h2 class="section-title">This is what you optimized</h2>
+                <p class="section-sub">From one warehouse → Everywhere</p>
+                
+                <!-- Truck Animation Canvas -->
+                <div class="delivery-animation">
+                    <div class="warehouse">
+                        <span class="warehouse-icon">🏭</span>
+                        <span class="warehouse-label">Distribution Hub</span>
+                    </div>
+                    
+                    <!-- Trucks -->
+                    <div class="truck truck-1">🚚</div>
+                    <div class="truck truck-2">🚛</div>
+                    <div class="truck truck-3">🚚</div>
+                    <div class="truck truck-4">🚛</div>
+                    <div class="truck truck-5">🚚</div>
+                    <div class="truck truck-6">🚛</div>
+                    
+                    <!-- Stores -->
+                    <div class="store store-1"><span>🏪</span></div>
+                    <div class="store store-2"><span>🏬</span></div>
+                    <div class="store store-3"><span>⛽</span></div>
+                    <div class="store store-4"><span>🏪</span></div>
+                    <div class="store store-5"><span>🏬</span></div>
+                    <div class="store store-6"><span>🏪</span></div>
                 </div>
                 
-                <!-- Routes -->
-                <svg class="routes-svg" viewBox="0 0 800 500">
-                    <path class="route route-1" d="M 400,250 Q 200,150 100,80" />
-                    <path class="route route-2" d="M 400,250 Q 500,100 700,60" />
-                    <path class="route route-3" d="M 400,250 Q 600,200 750,250" />
-                    <path class="route route-4" d="M 400,250 Q 550,350 700,420" />
-                    <path class="route route-5" d="M 400,250 Q 300,400 150,450" />
-                    <path class="route route-6" d="M 400,250 Q 150,280 50,250" />
-                </svg>
+                <div class="impact-stats">
+                    <div class="impact-stat">
+                        <span class="stat-icon">⚡</span>
+                        <span class="stat-value">30%</span>
+                        <span class="stat-label">Faster</span>
+                    </div>
+                    <div class="impact-stat">
+                        <span class="stat-icon">💰</span>
+                        <span class="stat-value">$M+</span>
+                        <span class="stat-label">Saved</span>
+                    </div>
+                    <div class="impact-stat">
+                        <span class="stat-icon">🌍</span>
+                        <span class="stat-value">40%</span>
+                        <span class="stat-label">Less CO₂</span>
+                    </div>
+                </div>
                 
-                <!-- Trucks -->
-                <div class="truck truck-1">🚚</div>
-                <div class="truck truck-2">🚛</div>
-                <div class="truck truck-3">🚚</div>
-                <div class="truck truck-4">🚛</div>
-                <div class="truck truck-5">🚚</div>
-                <div class="truck truck-6">🚛</div>
-                
-                <!-- Stores -->
-                <div class="store store-1"><span>🏪</span></div>
-                <div class="store store-2"><span>🏬</span></div>
-                <div class="store store-3"><span>⛽</span></div>
-                <div class="store store-4"><span>🏪</span></div>
-                <div class="store store-5"><span>🏬</span></div>
-                <div class="store store-6"><span>🏪</span></div>
+                <button id="unlock-btn-3" class="unlock-btn">
+                    <span>One more thing...</span>
+                    <span class="arrow">→</span>
+                </button>
             </div>
-            
-            <div class="impact-stats">
-                <div class="impact-stat">
-                    <span class="stat-icon">⚡</span>
-                    <span class="stat-value">30%</span>
-                    <span class="stat-label">Faster</span>
-                </div>
-                <div class="impact-stat">
-                    <span class="stat-icon">💰</span>
-                    <span class="stat-value">$M+</span>
-                    <span class="stat-label">Saved</span>
-                </div>
-                <div class="impact-stat">
-                    <span class="stat-icon">🌍</span>
-                    <span class="stat-value">40%</span>
-                    <span class="stat-label">Less CO₂</span>
-                </div>
-            </div>
-            
-            <button id="unlock-btn-3" class="unlock-btn">
-                <span>One more thing...</span>
-                <span class="arrow">→</span>
-            </button>
         </div>
     </section>
 
     <!-- Page 4: Final Message -->
     <section id="page4" class="page page-4">
-        <button class="back-btn" data-target="2">← Back</button>
-        <div class="page4-content">
-            <div class="final-sparkles">
-                <span class="fs fs-1">🌟</span>
-                <span class="fs fs-2">✨</span>
-                <span class="fs fs-3">⭐</span>
-                <span class="fs fs-4">💫</span>
-                <span class="fs fs-5">🌟</span>
-                <span class="fs fs-6">✨</span>
-            </div>
-            
-            <div class="wings-container">
-                <span class="wing wing-left">🪽</span>
-                <div class="final-message">
-                    <h1>Go give 'em wings!</h1>
+        <div class="page4-wrapper">
+            <button class="back-btn" data-target="2">← Back</button>
+            <div class="page4-content">
+                <div class="final-sparkles">
+                    <span class="fs">🌟</span>
+                    <span class="fs">✨</span>
+                    <span class="fs">⭐</span>
+                    <span class="fs">💫</span>
+                    <span class="fs">🌟</span>
+                    <span class="fs">✨</span>
                 </div>
-                <span class="wing wing-right">🪽</span>
-            </div>
-            
-            <div class="closing">
-                <p class="proud-statement">We're so proud of you, Ananya.</p>
-                <p class="go-text">Now go show 2,000 people what a badass data scientist looks like.</p>
-            </div>
-            
-            <div class="redbull-can">
-                <span>🥤</span>
-            </div>
-            
-            <div class="signature">
-                <p>— Your friends who believe in you 💪</p>
+                
+                <div class="wings-container">
+                    <span class="wing-final wing-final-left">🪽</span>
+                    <div class="final-message">
+                        <h1>Go give 'em wings!</h1>
+                    </div>
+                    <span class="wing-final wing-final-right">🪽</span>
+                </div>
+                
+                <div class="closing">
+                    <p class="proud-statement">We're so proud of you, Ananya.</p>
+                    <p class="go-text">Now go show 2,000 people what a badass data scientist looks like.</p>
+                </div>
+                
+                <div class="redbull-can">🥤</div>
+                
+                <div class="signature">
+                    <p>— Your friends who believe in you 💪</p>
+                </div>
             </div>
         </div>
     </section>
