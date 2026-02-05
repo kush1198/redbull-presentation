@@ -8,13 +8,11 @@ document.addEventListener('DOMContentLoaded', () => {
     const goToPage = (index) => {
         if (index < 0 || index >= pages.length || index === currentPage) return;
 
-        const direction = index > currentPage ? 'forward' : 'backward';
-        
         // Exit current page
-        pages[currentPage].classList.add(direction === 'forward' ? 'exit-left' : '');
         pages[currentPage].classList.remove('active');
+        pages[currentPage].classList.add('exit-left');
         
-        // Enter new page
+        // Enter new page after brief delay
         setTimeout(() => {
             pages[currentPage].classList.remove('exit-left');
             currentPage = index;
@@ -26,13 +24,19 @@ document.addEventListener('DOMContentLoaded', () => {
             });
             
             // Show/hide back button
-            backBtn.classList.toggle('hidden', currentPage === 0);
-        }, 100);
+            if (currentPage === 0) {
+                backBtn.classList.add('hidden');
+            } else {
+                backBtn.classList.remove('hidden');
+            }
+        }, 150);
     };
 
     // CTA button clicks
     document.querySelectorAll('.cta-btn[data-next]').forEach(btn => {
-        btn.addEventListener('click', () => {
+        btn.addEventListener('click', (e) => {
+            e.preventDefault();
+            e.stopPropagation();
             const nextPage = parseInt(btn.dataset.next);
             goToPage(nextPage);
         });
@@ -40,14 +44,18 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Progress dot clicks
     dots.forEach(dot => {
-        dot.addEventListener('click', () => {
+        dot.addEventListener('click', (e) => {
+            e.preventDefault();
+            e.stopPropagation();
             const page = parseInt(dot.dataset.page);
             goToPage(page);
         });
     });
 
-    // Back button
-    backBtn.addEventListener('click', () => {
+    // Back button click
+    backBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        e.stopPropagation();
         if (currentPage > 0) {
             goToPage(currentPage - 1);
         }
@@ -91,13 +99,11 @@ document.addEventListener('DOMContentLoaded', () => {
         const deltaY = touchStartY - touchEndY;
         const minSwipe = 50;
 
-        // Only handle horizontal swipes (not vertical scrolling)
+        // Only handle horizontal swipes
         if (Math.abs(deltaX) > Math.abs(deltaY) && Math.abs(deltaX) > minSwipe) {
             if (deltaX > 0 && currentPage < pages.length - 1) {
-                // Swipe left - next page
                 goToPage(currentPage + 1);
             } else if (deltaX < 0 && currentPage > 0) {
-                // Swipe right - previous page
                 goToPage(currentPage - 1);
             }
         }

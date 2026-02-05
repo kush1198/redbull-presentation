@@ -7,11 +7,12 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css?v=5">
+    <link rel="stylesheet" href="style.css?v=6">
 </head>
 <body>
     <!-- Page 1: Takeoff / Hype Intro -->
     <section id="page1" class="page page-1 active">
+        <div class="page-bg page-1-bg"></div>
         <div class="page-inner">
             <div class="hero-visual">
                 <div class="wing wing-left">🪽</div>
@@ -35,10 +36,16 @@
                 Tap to take off <span class="wing-icon">🪽</span>
             </button>
         </div>
+        
+        <!-- Floating cans -->
+        <div class="floating-can can-1">🥤</div>
+        <div class="floating-can can-2">🥤</div>
+        <div class="floating-can can-3">🥤</div>
     </section>
 
     <!-- Page 2: The Work -->
     <section id="page2" class="page page-2">
+        <div class="page-bg page-2-bg"></div>
         <div class="page-inner">
             <div class="work-intro">
                 <p class="work-headline">This is not an animation.</p>
@@ -86,6 +93,7 @@
 
     <!-- Page 3: Final Pump -->
     <section id="page3" class="page page-3">
+        <div class="page-bg page-3-bg"></div>
         <div class="page-inner">
             <div class="final-wings">
                 <span class="final-wing left">🪽</span>
@@ -104,10 +112,18 @@
                 <p class="final-line">Now go remind them why Red Bull hires people like you.</p>
             </div>
             
+            <div class="redbull-can-img">
+                <img src="redbull-can.jpg" alt="Red Bull" class="can-image">
+            </div>
+            
             <button class="cta-btn final-cta">
                 Go crush it <span class="rocket">🚀</span>
             </button>
         </div>
+        
+        <!-- Floating cans -->
+        <div class="floating-can can-4">🥤</div>
+        <div class="floating-can can-5">🥤</div>
     </section>
 
     <!-- Progress Dots -->
@@ -120,6 +136,6 @@
     <!-- Back Button -->
     <button class="back-btn hidden" id="backBtn">← Back</button>
 
-    <script src="script.js?v=5"></script>
+    <script src="script.js?v=6"></script>
 </body>
 </html>
